@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Training Programs Gallery</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap" rel="stylesheet">
+
+    <style>
+        .image-card {
+            margin-bottom: 20px;
+            border-radius: 10px;
+            background-color: transparent;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+            cursor: pointer;
+        }
+
+        .image-card:hover {
+            transform: scale(1.03);
+        }
+
+        .image-card img {
+            width: 100%;
+            height: 250px;
+            object-fit: content;
+            border-radius: 10px;
+
+        }
+
+        h2.text-center {
+            font-family: 'Raleway', sans-serif;
+            font-size: 2.8rem;
+            background: linear-gradient(45deg, #6a11cb, #2575fc);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+            letter-spacing: 1.5px;
+            margin-bottom: 40px;
+            animation: fadeIn 1s ease;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-15px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+
+        .image-card {
+            height: 270px;
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            /* background-color: transparent; */
+            justify-content: center;
+        }
+
+
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: beige;
+            background-size: 400% 400%;
+            animation: gradientBG 15s ease infinite;
+        }
+
+        @keyframes gradientBG {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+        .card-wrapper {
+            position: relative;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container py-5">
+        <h2 class="text-center mb-4">Available Training Programs</h2>
+        <div class="row" id="gallery"></div>
+    </div>
+    <div>
+        <script>
+            const programs = [
+                { name: 'Web Development', img: 'assets/images/web.png', id: 'web' },
+                { name: 'Laravel', img: 'assets/images/laravel.png', id: 'laravel' },
+                { name: 'JavaScript', img: 'assets/images/js.png', id: 'js' },
+                { name: 'Python', img: 'assets/images/python.png', id: 'python' },
+                { name: 'Air Conditioning', img: 'assets/images/Aircondition.png', id: 'air' },
+                { name: 'Digital Marketing', img: 'assets/images/digitalmarketing.png', id: 'digital' },
+                { name: 'English', img: 'assets/images/English.png', id: 'english' },
+                { name: 'HTML & CSS', img: 'assets/images/html&css.png', id: 'htmlcss' },
+                { name: 'Java', img: 'assets/images/java.png', id: 'java' },
+                { name: 'PHP', img: 'assets/images/php.png', id: 'php' },
+                { name: 'PPC', img: 'assets/images/ppc.png', id: 'ppc' },
+                { name: 'SEO', img: 'assets/images/seo.png', id: 'seo' },
+                { name: 'SMM', img: 'assets/images/smm.png', id: 'smm' },
+            ];
+
+
+            const gallery = document.getElementById('gallery');
+            programs.forEach(prog => {
+                gallery.innerHTML += `
+        <div class="col-md-3">
+          <div class="image-card card-wrapper" onclick="goToDetails('${prog.id}')">
+            <img src="${prog.img}" alt="${prog.name}">
+          </div>
+        </div>`;
+            });
+
+            function goToDetails(id) {
+                window.location.href = 'details.html?course=' + id;
+            }
+        </script>
+</body>
+
+</html>

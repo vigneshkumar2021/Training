@@ -1,0 +1,117 @@
+body {
+  margin: 0;
+  font-family: sans-serif;
+  background-color: #f4f4f4;
+}
+
+.navbar {
+  background-color: #e5c3f0;
+  border-radius: 10px;
+  padding: 7px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.search-box {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.search-box input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  outline: none;
+  width: 700px;
+  transition: 0.3s;
+}
+
+.search-box input:focus {
+  border-color: #9b59b6;
+  box-shadow: 0 0 5px rgba(155, 89, 182, 0.5);
+}
+
+.search-box button {
+  background-color: #9b59b6;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.search-box button:hover {
+  background-color: #7e3d9c;
+}
+
+
+.title {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 800;
+  /* or any weight between 100 to 900 */
+  font-size: 25px;
+  color: #7e3d9c;
+}
+
+
+.buttons button {
+  margin-left: 12px;
+  background-color: #7e3d9c;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 60px 0px;
+}
+
+.card {
+  padding: 0px;
+  border-radius: 12px;
+  width: 600px;
+  height: 300px;
+  text-align: center;
+}
+
+.card img,
+.video-wrapper iframe {
+  width: 90%;
+  height: 250px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.video-wrapper {
+  width: 90%;
+  height: 260px;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.card h3 {
+  margin: 20px 0 15px;
+  font-weight: 500;
+  font-size: 20px;
+}
+
+
+.explore {
+  background-color: #7e3d9c;
+  color: white;
+  padding: 12px 26px;
+  font-size: 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
