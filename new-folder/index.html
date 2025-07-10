@@ -193,124 +193,125 @@
 
   <div class="navbar">
     <div class="title">Swivtrek</div>
-        <div class="buttons">
+    <div class="buttons">
       <button>LOGIN</button>
       <button>SIGN UP</button>
     </div>
   </div>
   <br><br>
   <!-- Two-Column Content -->
-<div class="main-content">
-  <div class="text-box">
-    <h2>About This Playlist</h2>
-    <p>
-      This is a description of the video playlist. It appears on the left side while the video remains
-      centered in the right half of the screen. The video plays in square format with autoplay and playlist
-      functionality.
-    </p>
-  </div>
+  <div class="main-content">
+    <div class="text-box">
+      <h2>About This Playlist</h2>
+      <p>
+        This is a description of the video playlist. It appears on the left side while the video remains
+        centered in the right half of the screen. The video plays in square format with autoplay and playlist
+        functionality.
+      </p>
+    </div>
 
-  <div class="video-box">
-    <div class="video-square">
-      <div id="player"></div>
+    <div class="video-box">
+      <div class="video-square">
+        <div id="player"></div>
+      </div>
     </div>
   </div>
-</div>
 
-<style>
-  .main-content {
-    display: flex;
-    flex-direction: row;
-    padding: 20px 0; /* reduce top and bottom space */
-    margin: 0;
-    align-items: center;
-  }
-
-  .text-box {
-    width: 50%;
-    padding: 0 30px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-
-  .text-box h2 {
-    margin-bottom: 15px;
-    font-size: 24px;
-    color: #333;
-  }
-
-  .text-box p {
-    font-size: 16px;
-    color: #555;
-    line-height: 1.6;
-  }
-
-  .video-box {
-    width: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .video-square {
-    width: 400px;
-    height: 400px;
-  }
-
-  #player {
-    width: 100%;
-    height: 100%;
-  }
-
-  @media (max-width: 768px) {
+  <style>
     .main-content {
-      flex-direction: column;
-      padding: 20px;
+      display: flex;
+      flex-direction: row;
+      padding: 20px 0;
+      /* reduce top and bottom space */
+      margin: 0;
+      align-items: center;
     }
 
-    .text-box,
+    .text-box {
+      width: 50%;
+      padding: 0 30px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .text-box h2 {
+      margin-bottom: 15px;
+      font-size: 24px;
+      color: #333;
+    }
+
+    .text-box p {
+      font-size: 16px;
+      color: #555;
+      line-height: 1.6;
+    }
+
     .video-box {
-      width: 100%;
-      text-align: center;
-      padding: 10px;
+      width: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
 
     .video-square {
-      width: 300px;
-      height: 300px;
+      width: 400px;
+      height: 400px;
     }
-  }
-</style>
 
-<!-- YouTube IFrame API -->
-<script src="https://www.youtube.com/iframe_api"></script>
-<script>
-  const videoIds = [
-    "pdlgI7X4rsk", "M7lc1UVf-VE", "3JZ_D3ELwOQ",
-    "l482T0yNkeo", "e-ORhEE9VVg", "hY7m5jjJ9mM"
-  ];
+    #player {
+      width: 100%;
+      height: 100%;
+    }
 
-  let player, currentIndex = 0;
-
-  function onYouTubeIframeAPIReady() {
-    player = new YT.Player('player', {
-      videoId: videoIds[currentIndex],
-      playerVars: { autoplay: 1, mute: 1, controls: 1, rel: 0, modestbranding: 1 },
-      events: {
-        'onReady': e => e.target.playVideo(),
-        'onStateChange': onPlayerStateChange
+    @media (max-width: 768px) {
+      .main-content {
+        flex-direction: column;
+        padding: 20px;
       }
-    });
-  }
 
-  function onPlayerStateChange(e) {
-    if (e.data === YT.PlayerState.ENDED) {
-      currentIndex = (currentIndex + 1) % videoIds.length;
-      player.loadVideoById(videoIds[currentIndex]);
+      .text-box,
+      .video-box {
+        width: 100%;
+        text-align: center;
+        padding: 10px;
+      }
+
+      .video-square {
+        width: 300px;
+        height: 300px;
+      }
     }
-  }
-</script>
+  </style>
+
+  <!-- YouTube IFrame API -->
+  <script src="https://www.youtube.com/iframe_api"></script>
+  <script>
+    const videoIds = [
+      "pdlgI7X4rsk", "M7lc1UVf-VE", "3JZ_D3ELwOQ",
+      "l482T0yNkeo", "e-ORhEE9VVg", "hY7m5jjJ9mM"
+    ];
+
+    let player, currentIndex = 0;
+
+    function onYouTubeIframeAPIReady() {
+      player = new YT.Player('player', {
+        videoId: videoIds[currentIndex],
+        playerVars: { autoplay: 1, mute: 1, controls: 1, rel: 0, modestbranding: 1 },
+        events: {
+          'onReady': e => e.target.playVideo(),
+          'onStateChange': onPlayerStateChange
+        }
+      });
+    }
+
+    function onPlayerStateChange(e) {
+      if (e.data === YT.PlayerState.ENDED) {
+        currentIndex = (currentIndex + 1) % videoIds.length;
+        player.loadVideoById(videoIds[currentIndex]);
+      }
+    }
+  </script>
 
   <div class="content">
     <div class="card">
