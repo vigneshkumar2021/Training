@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <title>Student Signup</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  
+
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
   <style>
@@ -28,8 +29,15 @@
     }
 
     @keyframes gradientBG {
-      0%, 100% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
+
+      0%,
+      100% {
+        background-position: 0% 50%;
+      }
+
+      50% {
+        background-position: 100% 50%;
+      }
     }
 
     .form-card {
@@ -45,11 +53,19 @@
     }
 
     @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(30px); }
-      to { opacity: 1; transform: translateY(0); }
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
 
-    .form-label, h3 {
+    .form-label,
+    h3 {
       font-family: 'Merriweather', serif;
       font-weight: 700;
     }
@@ -63,9 +79,13 @@
       background: linear-gradient(to right, #764ba2, #667eea);
     }
 
-    .form-check-label { margin-right: 15px; font-weight: bold; }
+    .form-check-label {
+      margin-right: 15px;
+      font-weight: bold;
+    }
 
-    .toggle-password, .match-icon {
+    .toggle-password,
+    .match-icon {
       position: absolute;
       top: 72%;
       transform: translateY(-50%);
@@ -74,11 +94,22 @@
       color: #666;
     }
 
-    .toggle-password { right: 40px; }
-    .match-icon { right: 15px; pointer-events: none; }
+    .toggle-password {
+      right: 40px;
+    }
 
-    .match-icon.correct { color: green; }
-    .match-icon.incorrect { color: red; }
+    .match-icon {
+      right: 15px;
+      pointer-events: none;
+    }
+
+    .match-icon.correct {
+      color: green;
+    }
+
+    .match-icon.incorrect {
+      color: red;
+    }
 
     .container-fullscreen {
       height: 100vh;
@@ -90,42 +121,48 @@
     }
   </style>
 </head>
+
 <body>
   <div class="container-fullscreen">
     <div class="form-card">
       <h3 class="text-center mb-4">Student Signup</h3>
       <form onsubmit="return validateForm()">
         <div class="row">
-          <div class="col-md-6 mb-3"><label class="form-label">Full Name</label><input type="text" class="form-control" required /></div>
-          <div class="col-md-6 mb-3"><label class="form-label">Age</label><input type="text" class="form-control" required /></div>
+          <div class="col-md-6 mb-3"><label class="form-label">Full Name</label><input type="text" class="form-control"
+              required /></div>
+          <div class="col-md-6 mb-3"><label class="form-label">Age</label><input type="text" class="form-control"
+              required /></div>
         </div>
 
         <div class="row">
-          <div class="col-md-6 mb-3"><label class="form-label">Email</label><input type="email" class="form-control" required /></div>
-          <div class="col-md-6 mb-3"><label class="form-label">Phone Number</label><input type="tel" class="form-control" required /></div>
+          <div class="col-md-6 mb-3"><label class="form-label">Email</label><input type="email" class="form-control"
+              required /></div>
+          <div class="col-md-6 mb-3"><label class="form-label">Phone Number</label><input type="tel"
+              class="form-control" required /></div>
         </div>
 
         <div class="row">
-          <div class="col-md-6 mb-3"><label class="form-label">Standard</label>
-            <select class="form-select" required>
-              <option selected disabled>Select standard</option>
-              <option>6th</option><option>7th</option><option>8th</option><option>9th</option>
-              <option>10th</option><option>11th</option><option>12th</option>
-            </select>
-          </div>
-          <div class="col-md-6 mb-3"><label class="form-label">School</label><input type="text" class="form-control" required /></div>
+          <div class="col-md-6 mb-3"><label class="form-label">School/College Name</label><input type="text"
+              class="form-control" required /></div>
+          <div class="col-md-6 mb-3"><label class="form-label">Department</label><input type="text" class="form-control"
+              required /></div>
         </div>
 
         <div class="row">
-          <div class="col-md-6 mb-3"><label class="form-label">Address</label><textarea class="form-control" rows="2" required></textarea></div>
-          <div class="col-md-6 mb-3"><label class="form-label">District</label><input type="text" class="form-control" required /></div>
+          <div class="col-md-6 mb-3"><label class="form-label">Address</label><textarea class="form-control" rows="2"
+              required></textarea></div>
+          <div class="col-md-6 mb-3"><label class="form-label">District</label><input type="text" class="form-control"
+              required /></div>
         </div>
 
         <div class="mb-3">
           <label class="form-label">Gender</label><br />
-          <div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="gender" value="male" required /><label class="form-check-label">Male</label></div>
-          <div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="gender" value="female" required /><label class="form-check-label">Female</label></div>
-          <div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="gender" value="other" required /><label class="form-check-label">Other</label></div>
+          <div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="gender"
+              value="male" required /><label class="form-check-label">Male</label></div>
+          <div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="gender"
+              value="female" required /><label class="form-check-label">Female</label></div>
+          <div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="gender"
+              value="other" required /><label class="form-check-label">Other</label></div>
         </div>
 
         <div class="row">
@@ -135,7 +172,8 @@
           </div>
           <div class="col-md-6 mb-3 position-relative">
             <label class="form-label">Confirm Password</label>
-            <input type="password" class="form-control" id="confirmPassword" required minlength="5" onkeyup="checkMatch()" />
+            <input type="password" class="form-control" id="confirmPassword" required minlength="5"
+              onkeyup="checkMatch()" />
             <i class="fas fa-eye toggle-password" onclick="togglePassword('confirmPassword')"></i>
             <span id="matchIcon" class="match-icon"></span>
           </div>
@@ -169,4 +207,5 @@
     };
   </script>
 </body>
+
 </html>
