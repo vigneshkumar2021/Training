@@ -4,6 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Swivel Training</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
@@ -12,6 +13,7 @@
   <script src="https://kit.fontawesome.com/yourkitid.js" crossorigin="anonymous"></script>
 
   <style>
+    
     body {
       margin: 0;
       font-family: 'Outfit', sans-serif;
@@ -68,7 +70,7 @@
       padding: 60px 0px;
     }
 
-   .card {
+    .card {
       padding: 0px;
       border-radius: 12px;
       width: 600px;
@@ -200,11 +202,13 @@
     }
 
     .opportunity-box {
-      background-color: #f9f9f9;
+      background-color: #f7f3f3;
       padding: 25px;
       border-radius: 10px;
       color: #333;
       max-width: 800px;
+      /* position: relative;
+      left: -100px; */
       margin: auto;
     }
 
@@ -271,6 +275,16 @@
       height: 100%;
     }
 
+    @media (max-width: 1000px) {
+
+      .opportunity-box {
+        position: relative;
+        left: -100px;
+        height: 700px;
+      }
+
+    }
+
     @media (max-width: 768px) {
       .main-content {
         flex-direction: column;
@@ -307,7 +321,7 @@
       .card {
         width: 90%;
       }
-     
+
     }
   </style>
 
@@ -315,15 +329,19 @@
 
 <body>
 
-  <!-- Static header (converted from Blade partial) -->
-  <header class="navbar">
-    <div class="title">Swivel Training</div>
-    <div class="buttons">
-      <a href="/login"><button>Login</button></a>
-      <a href="/register"><button>Register</button></a>
-    </div>
-  </header>
+  <div class="navbar">
+    <div class="title">Swivtrek</div>
 
+    <div class="buttons">
+
+      <a href="/login.html"><button>LOGIN</button></a>
+      <a href="/signup.html"><button>SIGN UP</button></a>
+
+
+    </div>
+
+
+  </div>
   <br><br>
   <div class="main-content">
     <div class="text-box">
@@ -403,17 +421,16 @@
   <div class="content">
     <div class="card">
       <div class="video-wrapper">
-        <img
-          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSS4E-1dGYNE7u3A_2mPeMDS52kwv9_n8U1jw&s">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSS4E-1dGYNE7u3A_2mPeMDS52kwv9_n8U1jw&s">
       </div>
       <h3 style="color: #7e3d9c;font-weight: bolder; ">VIDEO COURSES</h3>
-      <a href="/videocatagories"><button class="explore">EXPLORE</button></a>
+      <a href="./videomain.html"><button class="explore">EXPLORE</button></a>
     </div>
 
     <div class="card">
       <img src="https://itechindia.co/wp-content/uploads/2021/11/student-attendance-tracker.jpeg" alt="Live Courses">
       <h3 style="color: #7e3d9c;font-weight: bolder; ">LIVE COURSES</h3>
-      <a href="/livecatagories"><button class="explore">EXPLORE</button></a>
+      <a href="./freelancing1.html"><button class="explore">EXPLORE</button></a>
     </div>
   </div>
 
@@ -425,7 +442,7 @@
       style="max-width: 1100px; margin: auto; display: flex; flex-wrap: wrap; gap: 40px; align-items: center; justify-content: center;">
 
       <div style="flex: 1; min-width: 280px; text-align: left;">
-        <img src="/assets/course image/swivel.jpg" alt="About Icon" style="width: 300px; border-radius: 5%; ">
+        <img src="./course image/swivel.jpg" alt="About Icon" style="width: 300px; border-radius: 5%; ">
       </div>
 
       <div style="flex: 2; min-width: 300px;">
@@ -466,8 +483,8 @@
   text-align: center; 
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08); 
   transition: transform 0.3s ease;
-" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)">
-        <img src="/assets/course image/vision.png" alt="Vision Icon" style="width: 80px; margin-bottom: 20px;" />
+" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
+        <img src="./course image/vision.png" alt="Vision Icon" style="width: 80px; margin-bottom: 20px;" />
         <h2 style="
     font-family: 'Outfit', sans-serif; 
     font-weight: 800; 
@@ -496,7 +513,7 @@
   text-align: center; 
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08); 
   transition: transform 0.3s ease;
-" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'>
+" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
 
         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5TnAsOkTM_jDtKK26GEFWIKOso2ehWVKrEw&s"
           alt="Mission Icon" style="width: 80px; margin-bottom: 20px;" />
