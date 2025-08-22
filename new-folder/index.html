@@ -201,14 +201,14 @@
     }
 
     .opportunity-box {
-      background-color: #f7f3f3;
+      background-color: transparent;
       padding: 25px;
       border-radius: 10px;
       color: #333;
       max-width: 800px;
-      /* position: relative;
-      left: -100px; */
       margin: auto;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+
     }
 
     .opportunity-box h2 {
@@ -289,7 +289,7 @@
 
     @media (max-width: 660px) {
       .logoimg {
-        margin-left: 180px;
+        margin-left: 100px;
         /* text-align: center; */
       }
 
@@ -313,19 +313,21 @@
 
     }
 
-       @media (max-width: 480px) {
+    @media (max-width: 480px) {
 
-        .video-box{
-          margin-top: 350px;
-          margin-left: 80px;
-          /* position: relative;
+      .video-box {
+        margin-top: 450px;
+        margin-left: 80px;
+        /* position: relative;
           top: 50px; */
-        }
-        .opportunity-box{
-          background-color: transparent;
-        }
+      }
 
-       }
+      .opportunity-box {
+        background-color: transparent;
+        box-shadow: none;
+      }
+
+    }
 
     @media (max-width: 1000px) {
 
@@ -504,7 +506,7 @@
       style="max-width: 1100px; margin: auto; display: flex; flex-wrap: wrap; gap: 40px; align-items: center; justify-content: center;">
 
       <div style="flex: 1; min-width: 280px; text-align: left;">
-        <img src="./course image/swivel.jpg" alt="About Icon" style="width: 300px; border-radius: 5%; " class="logoimg">
+        <img src="./course image/swivel.png" alt="About Icon" style="width: 300px; border-radius: 5%; " class="logoimg">
       </div>
 
       <div style="flex: 2; min-width: 300px;">
@@ -578,8 +580,7 @@
   transition: transform 0.3s ease;
 " onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
 
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5TnAsOkTM_jDtKK26GEFWIKOso2ehWVKrEw&s"
-          alt="Mission Icon" style="width: 80px; margin-bottom: 20px;" />
+        <img src="./course image/mission.png" alt="Mission Icon" style="width: 80px; margin-bottom: 20px;" />
 
         <h2 style="
     font-family: 'Outfit', sans-serif; 
