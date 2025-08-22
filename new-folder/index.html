@@ -18,7 +18,7 @@
       font-family: 'Outfit', sans-serif;
       color: #333;
       background-color: rgb(233, 238, 230);
-        }
+    }
 
     .navbar {
       background-color: rgb(233, 238, 230);
@@ -316,10 +316,10 @@
       }
 
       .video-box {
-        margin-top: 300px;
+        margin-top: -100px;
         margin-left: 80px;
-        /* position: relative;
-          top: 50px; */
+        position: relative;
+      
       }
 
       .opportunity-box {
@@ -327,7 +327,49 @@
         box-shadow: none;
       }
 
+      .content{
+        margin-top: 200px;
+      }
 
+    }
+      @media (max-width: 768px) {
+      .main-content {
+        flex-direction: column;
+        /* stack vertically */
+      }
+
+      .video-box {
+        order: 1;
+        /* show video first */
+        width: 100%;
+        margin-bottom: 20px;
+      }
+
+      .text-box {
+        order: 2;
+        /* text below */
+        width: 100%;
+        margin-left: 0;
+        /* remove left spacing */
+        padding: 0 15px;
+      }
+
+      .video-box {
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .video-square {
+        width: 400px;
+        height: 400px;
+      }
+
+      #player {
+        width: 100%;
+        height: 100%;
+      }
     }
 
     @media (max-width: 400px) {
