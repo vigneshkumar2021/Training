@@ -12,7 +12,7 @@
     crossorigin="anonymous"></script>
   <script src="https://kit.fontawesome.com/yourkitid.js" crossorigin="anonymous"></script>
 
- <style>
+  <style>
     body {
       margin: 0;
       font-family: 'Outfit', sans-serif;
@@ -274,6 +274,65 @@
       height: 100%;
     }
 
+    @media (max-width: 900px) {
+
+      .opportunity-box {
+        position: relative;
+        left: -50px;
+        height: 2000px;
+      }
+
+      .opportunity-box h2 {
+        margin-top: -20px;
+      }
+
+    }
+
+    @media (max-width: 660px) {
+      .logoimg {
+        margin-left: 100px;
+        /* text-align: center; */
+      }
+
+      .who {
+        text-align: center;
+      }
+
+      #explore {
+        margin-top: 70px;
+      }
+
+      .opportunity-box {
+        font-size: 24px;
+      }
+
+      .opportunity-box h2 {
+        font-size: 22px;
+
+      }
+
+      .opportunity-box p {
+        font-size: 22px;
+      }
+
+      .video-box {
+        margin-top: -100px;
+        margin-left: 80px;
+        position: relative;
+
+      }
+
+      .opportunity-box {
+        background-color: transparent;
+        box-shadow: none;
+      }
+
+      .content {
+        margin-top: 200px;
+      }
+
+    }
+
     @media (max-width: 768px) {
       .main-content {
         flex-direction: column;
@@ -312,6 +371,91 @@
         width: 100%;
         height: 100%;
       }
+    }
+
+    @media (max-width: 450px) {
+
+      .logoimg {
+        position: relative;
+        left: -100px;
+
+      }
+
+      #button {
+
+        position: relative;
+        top: 10px;
+      }
+
+      .video-box {
+        margin-top: 50px;
+        margin-left: 80px;
+        /* position: relative;
+          top: 50px; */
+      }
+
+      .content {
+        margin-top: 300px;
+      }
+    }
+
+    @media (max-width: 1000px) {
+
+      .opportunity-box {
+        position: relative;
+        left: -50px;
+        height: 700px;
+      }
+
+      .video-box {
+        width: 50%;
+        display: flex;
+        position: relative;
+        left: -40px;
+        justify-content: center;
+        align-items: center;
+      }
+
+
+    }
+
+    @media (max-width: 768px) {
+      .main-content {
+        flex-direction: column;
+        padding: 20px;
+        position: relative;
+      }
+
+      .text-box,
+      .video-box {
+        width: 100%;
+        text-align: center;
+        padding: 10px;
+
+      }
+
+      .video-square {
+        width: 300px;
+        height: 400px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .content {
+        flex-direction: column;
+        align-items: center;
+
+      }
+
+      .about-container {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .card {
+        width: 90%;
+      }
+
     }
   </style>
 

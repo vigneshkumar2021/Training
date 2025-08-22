@@ -273,13 +273,6 @@
         /* stack vertically */
       }
 
-      .video-box {
-        order: 1;
-        /* show video first */
-        width: 100%;
-        margin-bottom: 20px;
-      }
-
       .text-box {
         order: 2;
         /* text below */
@@ -289,21 +282,92 @@
         padding: 0 15px;
       }
 
+
+
+      .navbar {
+        flex-wrap: nowrap;
+        padding: 10px 15px;
+      }
+
+      .title {
+        font-size: 22px;
+        /* smaller logo text */
+      }
+
       .video-box {
-        width: 50%;
+        margin-top: -100px;
+        margin-left: 80px;
+        position: relative;
+
+      }
+
+      .buttons {
         display: flex;
-        justify-content: center;
+        flex-direction: row;
+        /* force side by side */
+        flex-wrap: nowrap;
+        gap: 8px;
+        /* small spacing */
+      }
+
+      .buttons button {
+        padding: 8px 16px;
+        /* smaller button size */
+        font-size: 14px;
+      }
+
+    }
+
+    @media (max-width: 768px) {
+
+      /* main content section */
+      .main-content {
+        flex-direction: column;
         align-items: center;
       }
 
-      .video-square {
-        width: 400px;
-        height: 400px;
+      .video-box {
+        margin-top: -100px;
+        margin-left: 80px;
+        position: relative;
+        order: 1;
+        width: 100%;
+        margin-bottom: 20px;
+
       }
 
-      #player {
+      .text-box {
+        order: 2;
         width: 100%;
-        height: 100%;
+        margin-left: 0;
+        padding: 0 15px;
+      }
+
+      .video-portrait {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 16/9;
+        /* keeps video responsive */
+      }
+
+      /* content (cards) */
+      .content {
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px;
+      }
+
+      .card {
+        width: 100%;
+        max-width: 500px;
+        /* prevent stretching too wide */
+        margin: auto;
+      }
+
+      .card img,
+      .video-wrapper iframe {
+        width: 100%;
+        height: auto;
       }
     }
   </style>
@@ -398,6 +462,25 @@
       }
     }
   </script>
+
+  <div class="content">
+    <div class="card">
+      <div class="video-wrapper">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSS4E-1dGYNE7u3A_2mPeMDS52kwv9_n8U1jw&s">
+      </div>
+      <h3 style="color: #7e3d9c;font-weight: bolder; ">VIDEO COURSES</h3>
+      <a href="./videomain.html"><button class="explore">EXPLORE</button></a>
+    </div>
+
+    <div class="card" id="explore">
+      <img src="https://itechindia.co/wp-content/uploads/2021/11/student-attendance-tracker.jpeg" alt="Live Courses">
+      <h3 style="color: #7e3d9c;font-weight: bolder; ">LIVE COURSES</h3>
+      <a href="./freelancing1.html"><button class="explore">EXPLORE</button></a>
+    </div>
+  </div>
+
+  <br><br>
+
 </body>
 
 </html>
